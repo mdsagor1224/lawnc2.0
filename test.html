@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>lawnc || Landscaping</title>
+      <!-- fav logo -->
+      <link rel="shortcut icon" href="assets/img/logo/fav-logo1.svg" type="image/x-icon">
+      <!-- css files -->
+      <link rel="stylesheet" href="assets/css/plugins/bootstrap.min.css">
+      <link rel="stylesheet" href="assets/css/plugins/swiper-bundle.min.css">
+      <link rel="stylesheet" href="assets/css/plugins/nice-select.css">
+      <link rel="stylesheet" href="assets/css/plugins/all.css">
+      <link rel="stylesheet" href="assets/css/plugins/magnific-popup.css">
+      <link rel="stylesheet" href="assets/css/plugins/sal.css">
+      <link rel="stylesheet" href="assets/css/plugins/comparsion.css">
+      <link rel="stylesheet" href="assets/css/style.css">
+   </head>
+   <body>
+   
+      <div class="vl-progress">
+         <div class="container">
+            <div class="row">
+               <div class="col-xl-6">
+                  <div class="commitment-body">
+                     <!-- Skills Progress Bar Start -->
+                     <div class="skills-progress-bar">
+                        <!-- Skill Item Start -->
+                        <div class="skillbar" data-percent="80%">
+                           <div class="skill-data">
+                                 <div class="skill-title">Milk Production</div>
+                                 <div class="skill-no">80%</div>
+                           </div>
+                           <div class="skill-progress">
+                                 <div class="count-bar" style="width: 80%;"></div>
+                           </div>
+                        </div>
+                        <!-- Skill Item End -->
+                     </div>
+                     <!-- Skills Progress Bar End -->
+                        
+                     <!-- Skills Progress Bar Start -->
+                     <div class="skills-progress-bar">
+                        <!-- Skill Item Start -->
+                        <div class="skillbar" data-percent="93%">
+                           <div class="skill-data">
+                                 <div class="skill-title">Nutrient Management</div>
+                                 <div class="skill-no">93%</div>
+                           </div>
+                           <div class="skill-progress">
+                                 <div class="count-bar" style="width: 93%;"></div>
+                           </div>
+                        </div>
+                        <!-- Skill Item End -->
+                     </div>
+                     <!-- Skills Progress Bar End -->
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+
+
+
+ 
+
+
+
+    <style>
+
+.commitment-body{
+	margin-top: 30px;
+}
+
+.skills-progress-bar{
+	margin-bottom: 20px;
+}
+
+.skills-progress-bar:last-child{
+	margin-bottom: 0;
+}
+
+.skills-progress-bar .skill-data{
+	display: flex;
+    justify-content: space-between;
+	gap: 10px;
+	margin-bottom: 10px;
+}
+
+.skills-progress-bar .skill-data .skill-title,
+.skills-progress-bar .skill-data .skill-no{
+	font-size: 16px;
+	line-height: normal;
+	color:#333;
+}
+
+.skills-progress-bar .skillbar .skill-progress{
+	position: relative;
+	width: 100%;
+	height: 16px;
+	background: #333;
+	border: 1px solid #454545;
+	border-radius: 100px;
+    overflow: hidden;
+}
+
+.skills-progress-bar .skillbar .skill-progress .count-bar{
+    position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	background: red;
+    border-radius: 100px;
+}
+
+    </style>
+
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const progressBars = document.querySelectorAll('.skills-progress-bar');
+
+  if (progressBars.length > 0) {
+    const observer = new IntersectionObserver(function (entries, observer) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const skillBars = entry.target.querySelectorAll('.skillbar');
+
+          skillBars.forEach(skillBar => {
+            const countBar = skillBar.querySelector('.count-bar');
+            const percent = skillBar.getAttribute('data-percent');
+            countBar.style.transition = 'width 2s ease';
+            countBar.style.width = percent;
+          });
+
+          observer.unobserve(entry.target); // run once
+        }
+      });
+    }, {
+      root: null,
+      threshold: 0.3 // 30% similar to offset: '70%'
+    });
+
+    progressBars.forEach(bar => observer.observe(bar));
+  }
+});
+</script>
+      
+    
+      <!-- js file -->
+      <script src="assets/js/plugins/jquery-3.7.1.min.js"></script>
+      <script src="assets/js/plugins/bootstrap.min.js"></script>
+      <script src="assets/js/plugins/swiper-bundle.min.js"></script>
+      <script src="assets/js/plugins/nice-select.js"></script>
+      <script src="assets/js/plugins/fontawesome.min.js"></script>
+      <script src="assets/js/plugins/magnific-popup.js"></script>
+      <script src="assets/js/plugins/waypoints.js"></script>
+      <script src="assets/js/plugins/jquery.counterup.min.js"></script>
+      <script src="assets/js/plugins/comparsion.js"></script>
+      <script src="assets/js/plugins/jquery.event.move.js"></script>
+      <script src="assets/js/plugins/sal.min.js"></script>
+      <script src="assets/js/main.js"></script>
+   </body>
+</html>
+
+
